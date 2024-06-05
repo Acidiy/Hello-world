@@ -9,6 +9,9 @@ button{
     height: 50px;
     border-radius: 50%;
     background-color: rgb(56, 92, 56);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #pushcard{
@@ -19,7 +22,6 @@ button{
     margin-top: 20px;
     width: 100vw;
     height: 200px;
-    background-color: grey;
     display: flex;
     align-items: center;
     overflow-x: hidden;
@@ -31,7 +33,7 @@ button{
     width: 200px;
     min-width: 200px;
     height: 100%;
-    background-color: rgb(173, 84, 84);
+    background-color: rgb(185, 94, 94);
     border-radius: 30px;
     margin-left: 20px;
 }
