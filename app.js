@@ -1,15 +1,28 @@
-let section = document.getElementsByClassName('section')[0];
-let addcard = document.getElementById('pushcard');
-let cardcounter = document.createElement ('p');
+let section = document.getElementsByClassName('card-display')[0];
+let addcard = document.getElementById('push-card');
+let addmultiplecards = document.getElementById('mass-card-push');
 let ncards = 0;
 
+const cardpusher = () =>
+    {
+        let card = document.createElement('div');
+        card.classList.add('card');
+        section.appendChild(card);
+    
+        ncards++
+        addcard.innerText = `${ncards}`;
+    
+        delete card;
+    }
+
 addcard.addEventListener('click', function() {
-    let card = document.createElement('div');
-    card.classList.add('card');
-    section.appendChild(card);
+    cardpusher()
+});
 
-    ncards++
-    addcard.innerText = `${ncards}`;
-
-    delete card;
+ addmultiplecards.addEventListener('click', function() {
+     let amountofcards = prompt("how many cards?");
+     for (let i = 0; i<amountofcards; i++)
+        {
+            cardpusher()
+        }
 });
