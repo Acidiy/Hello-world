@@ -32,9 +32,10 @@ body{
 
 .card-display{
     margin-top: 20px;
+    padding: 0 20px;
     width: 100vw;
     height: 200px;
-    padding: 0 20px;
+
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -63,4 +64,27 @@ body{
     display: flex;
     align-items: center;
     padding: 0 10px;
+    gap: 10px;
+}
+
+/* .card-control-panel{
+    width: 150px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+
+.card-control-panel-button-add-list{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(84, 143, 84);
+}
+
+.card-control-panel-button-change-name{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(141, 69, 93)
 }
