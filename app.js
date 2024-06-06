@@ -12,6 +12,7 @@ let addlist = document.getElementsByClassName('')
 
 let ncards = 0;
 let idgiver = 1;
+let listcounter = 1;
 
 
 
@@ -69,10 +70,13 @@ addmultiplecards.addEventListener('click', function () {
     }
 });
 
-const createList = () =>
+const createList = (location) =>
     {
         let list = document.createElement('div');
+
         list.classList.add('list');
+        list.id = `listlocation-${location}-${listcounter}`
+        listcounter++;
         return list;
     }
 
@@ -80,7 +84,7 @@ const Listpusher = (location) =>
     {  
         let card = document.getElementById(`card${location}`);
 
-        card.appendChild(createList());
+        card.appendChild(createList(location));
     }
 
     // cardbuttonaddlist.onclick = () => console.log(event.target.id);
