@@ -1,13 +1,33 @@
 let section = document.getElementsByClassName('card-display')[0];
+const bulletpoint = document.createElement('li');
+
 let addcard = document.getElementById('push-card');
 let addmultiplecards = document.getElementById('mass-card-push');
+
 let ncards = 0;
+let cardid = 1;
+
+
+const cardcreator = () =>
+    {
+        let headerofcard = document.createElement('div');
+        let card = document.createElement('div');
+        
+        headerofcard.classList.add('header-of-card');
+        card.classList.add('card');
+
+        card.appendChild(headerofcard);
+        card.id = `card+" "${cardid}`;
+        cardid++;
+
+        delete headerofcard;
+
+        return card;
+    }
 
 const cardpusher = () =>
     {
-        let card = document.createElement('div');
-        card.classList.add('card');
-        section.appendChild(card);
+        section.appendChild(cardcreator());
     
         ncards++
         addcard.innerText = `${ncards}`;
@@ -16,6 +36,7 @@ const cardpusher = () =>
     }
 
 addcard.addEventListener('click', function() {
+
     cardpusher()
 });
 
